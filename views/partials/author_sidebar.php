@@ -1,6 +1,12 @@
+<?php
+if(session_status() === PHP_SESSION_NONE){
+session_start();
+} 
+$projectPath = $_SESSION['project_path'];
+?>
 <div class="bg-slate-400 w-40 text-center mt-3 ml-2">
       <img
-        src= "<?php echo $rootDirectory ."/public/img/profile.jpg"?>"
+        src= "<?php echo $projectPath ."/public/img/profile.jpg"?>"
         class="rounded-full w-32 px-1 pt-3 pb-2 mx-auto"
         alt="Avatar"
       />

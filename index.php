@@ -1,22 +1,32 @@
-
 <?php
-  //  Creating project directory
+if(session_status() === PHP_SESSION_NONE){
+session_start();
+} 
+
+
+?>
+<?php
+
 $foldersPathToRootDirectory =  __DIR__;
 
 $exploded = explode("\\", $foldersPathToRootDirectory);
 
-$fromHostToProjectDirectory = '';
+$yourProjectDirectory = '';
 
 for ($i = 3; $i < count($exploded); $i++)
 {
-  $fromHostToProjectDirectory .= "/". $exploded [$i];
+  $yourProjectDirectory .= "/". $exploded [$i];
 }
 
-$rootDirectory = "http://".$_SERVER['SERVER_NAME'].$fromHostToProjectDirectory;
+//$rootDirectory = "http://".$_SERVER['SERVER_NAME'].$fromHostToProjectDirectory;
+
+$_SESSION['project_path']=$yourProjectDirectory;
+
 
 ?>
 <?php
-  include __DIR__ . "/views/partials/header.php";
+
+  include (__DIR__  . "/views/partials/header.php");
   include __DIR__ . "/views/partials/author_sidebar.php"
 ?>
 
