@@ -12,9 +12,10 @@ session_start();
     <!-- <link href="../../../public/css/test.css" rel="stylesheet" /> -->
   </head>
   <body>
-       <!-- Navbar -->
+ 
+
        <div class="bg-red-500 h-20">
-       <h1 class="text-3xl">Navbaro</h1>
+       <h1 class="text-6xl">Navbaro</h1>
        </div>
        <div class="bg-slate-400 w-40 text-center mt-3 ml-2">
       <img
@@ -22,7 +23,5 @@ session_start();
         class="rounded-full w-32 px-1 pt-3 pb-2 mx-auto"
         alt="Avatar"
       />
-  
-    </div>
-  </body>
+ 
  
