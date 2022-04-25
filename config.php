@@ -7,7 +7,6 @@ session_start();
 <?php
 
 $foldersPathToRootDirectory =  __DIR__;
-echo $foldersPathToRootDirectory;
 $exploded = explode("\\", $foldersPathToRootDirectory);
 
 $yourProjectDirectory = '';
@@ -16,8 +15,7 @@ for ($i = 3; $i < count($exploded); $i++)
 {
   $yourProjectDirectory .= "/". $exploded [$i];
 }
-echo "<br>";
-echo $yourProjectDirectory;
+
 
 $rootDirectory = "http://".$_SERVER['SERVER_NAME'].$yourProjectDirectory;
 
