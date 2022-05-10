@@ -18,14 +18,16 @@ session_start();
 	<div class="w-full flex flex-wrap justify-between items-center bg-blue-100">
 		<div>
 			<a class="py-1 ml-4" href="#">
-			<img class="h-8 w-36 inline-block" src="<?php echo $_SESSION['project_path'] ."/public/img/logo.png"?>" alt="Topics">
+			<img class="h-8 w-8 inline-block" src="<?php echo $_SESSION['project_path'] ."/public/img/logo4.png"?>" alt="Topics">
 			</a>
 			<button class="ml-4 md:hidden inline-block">
 			<span class="bold">Topics</span><i class="fa-solid fa-caret-down"></i>
 			</button>
 		</div>
-		<div class="hidden md:block py-0.5 w-[32%]">
-			<input type="text" class="px-2 border-2 h-9 w-[100%]" placeholder="Search...">
+		<div class="md:flex md:flex-wrap hidden  w-[40%]">
+			<div class=" bg-blue-100 border-2 w-[90%]">
+			<span class=" bg-white py-2 px-2 mr-0"><i class="fa-solid fa-magnifying-glass"></i></span><input type="text" class="ml-0 px-2 h-9 w-[85%]" placeholder="Search...">
+			</div>
 		</div>
 
 		<div class=" px-2 py-1">
@@ -44,7 +46,7 @@ session_start();
 	
 
 	</div>
-	<div class="md:hidden mt-2 m-auto block  w-[97%]">
+	<div class="md:hidden mt-1 m-auto block  w-[97%]">
 			<input type="text" class="border-2 px-2 h-8 w-[100%]" placeholder="Search...">
 	</div>
 </nav>
