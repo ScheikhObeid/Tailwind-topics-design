@@ -20,37 +20,70 @@ session_start();
 			<a class="py-1 ml-4" href="#">
 			<img class="h-8 w-8 inline-block" src="<?php echo $_SESSION['project_path'] ."/public/img/logo4.png"?>" alt="Topics">
 			</a>
-			<button class="ml-4 md:hidden inline-block">
-			<span class="bold">Topics</span><i class="fa-solid fa-caret-down"></i>
+			<button class="ml-2 md:hidden inline-block">
+			<span class="font-bold px-2">Topics</span><i class="fa-solid fa-caret-down"></i>
 			</button>
 		</div>
-		<div class="md:flex md:flex-wrap hidden  w-[40%]">
-			<div class=" bg-blue-100 border-2 w-[90%]">
+		<div class="md:flex md:flex-wrap hidden w-[40%]">
+			<div class=" bg-blue-100 border-2 w-[89%]">
 			<span class=" bg-white py-2 px-2 mr-0"><i class="fa-solid fa-magnifying-glass"></i></span><input type="text" class="ml-0 px-2 h-9 w-[85%]" placeholder="Search...">
 			</div>
 		</div>
 
-		<div class=" px-2 py-1">
-			<a class="px-1"><i class="fa-regular fa-pen-to-square"></i></a>
-			<a class="px-1"><i class="fa-regular fa-star"></i></a>
-			<a class="px-1"><i class="fa-regular fa-bell"></i></a>
-			<img class="inline-block w-8 h-8 rounded-full ml-2 mr-4" src="<?php echo $_SESSION['project_path'] ."/public/img/profile.jpg"?>" alt="">
-
+		<div class="   px-2 py-1">
+			<a class="px-2"><i class="fa-regular fa-pen-to-square"></i></a>
+			<a class="px-2"><i class="fa-regular fa-star"></i></a>
+			<a class="px-2"><i class="fa-regular fa-bell"></i></a>
+			<img class="inline-block w-8 h-8 rounded-full ml-2 mr-4 " id="profile_img_id" onclick="show_list()" src="<?php echo $_SESSION['project_path'] ."/public/img/profile.jpg"?>" alt="">
+			<div id="profile_dropdown_id" class="absolute top-2 right-14 bg-slate-300 py-2 px-6  divide-y-2 divide-blue-700">
+				<ul >
+                <li class="py-1"><a href="#">Your prifile</a></li>
+                <li class="py-1"><a href="#">Settings</a></li>
+                <li class="py-1"><a href="#">Creat content</a></li>
+                <li class="py-1" ><a href="#">Data mining</a></li>
+				</ul>
+				<ul>
+                <li><a href="#">Logout</a></li>
+				</ul>
+            </div>
 		</div>
 
 		
-		<div class="hidden px-2 py-1">
+		<div class="hidden text-blue-500 font-medium px-2 py-1 mr-4">
 			<a class="px-1">Login</a>
 			<a class="px-1">Register</a>
 		</div>
 	
 
 	</div>
-	<div class="md:hidden mt-1 m-auto block  w-[97%]">
-			<input type="text" class="border-2 px-2 h-8 w-[100%]" placeholder="Search...">
-	</div>
+	<div class="flex flex-wrap md:hidden border-2 mt-1 ml-3 mr-5 w-full">
+			<div class=" bg-white m-auto  w-[95%]">
+			<span class=" bg-white py-2 pl-0 pr-3"><i class="fa-solid fa-magnifying-glass"></i></span><input type="text" class="ml-0 px-2 h-9 w-[90%]" placeholder="Search...">
+			</div>
+		</div>
 </nav>
-<br><br><br>
+<br><br><br><br><br><br>
+
+
+    <script>
+        function show_list() {
+            var courses = document.getElementById("profile_dropdown_id");
+ 
+            if (courses.style.display == "block") {
+                courses.style.display = "none";
+            } else {
+                courses.style.display = "block";
+            }
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('#profile_img_id')) {
+                document.getElementById('courses_id')
+                    .style.display = "none";
+            }
+        }   
+    </script>
+
+
 	<!-- Navbar goes here -->
 	<nav class="bg-red-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
 		<div class="container flex flex-wrap justify-between items-center mx-auto">
