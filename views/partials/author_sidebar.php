@@ -4,7 +4,7 @@ session_start();
 } 
 
 ?>
-<div class="bg-slate-400 w-40 text-center mt-3 ml-2">
+<div class="bg-slate-100 w-40 text-center mt-1 ml-1">
       <img
         src= "<?php echo $_SESSION['project_path'] ."/public/img/profile.jpg"?>"
         class="rounded-full w-32 px-1 pt-3 pb-2 mx-auto"

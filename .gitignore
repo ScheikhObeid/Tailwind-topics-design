@@ -17,3 +17,6 @@ isolate*.log
 
 # Generated files
 /src/corePluginList.js
+z-test.php
+z-dropdown.php
+z-singelpageMenu.php
